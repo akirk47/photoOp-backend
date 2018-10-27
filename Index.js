@@ -7,7 +7,9 @@ var mongoose = require('mongoose');
 var http = require('http');
 var routes = require('./routes');
 var server = http.createServer(app);
+var path = require('path')
 
+app.use(express.static(path.resolve(__dirname, '../build')))
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
