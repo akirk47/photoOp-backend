@@ -8,7 +8,7 @@ mongoose.connection.on('connected', function() {
 mongoose.connect(process.env.MONGODB_URI);
 
 const userSchema = mongoose.Schema({
-  PhoneNumber: {
+  phoneNumber: {
     type: Number,
     required: true,
   },
